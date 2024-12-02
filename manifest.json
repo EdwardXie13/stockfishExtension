@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "porn",
+  "version": "1.0",
+  "description": "pron",
+  "content_scripts": [{
+    "matches": [
+      "https://www.chess.com/*"
+    ],
+    "run_at": "document_idle",
+    "js": [
+      "./main.js"
+    ]}
+  ],
+  "permissions": [
+    "http://*.chess.com/*",
+    "activeTab"
+  ],
+  "web_accessible_resources": ["stockfish.js"],
+  "background": {
+    "scripts": ["background.js"]    
+  },
+  "browser_action": {
+    "default_title": "Click Button"
+  }
+}
